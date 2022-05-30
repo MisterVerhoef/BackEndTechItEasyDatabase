@@ -1,44 +1,26 @@
-package nl.novi.backend.techiteasy.Models;
+package nl.novi.backend.techiteasy.Dtos;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class TelevisionInputDto {
 
-@Entity
-public class Television {
-
-@Id
-@GeneratedValue
-Long id;
-
-//(incl. annotaties id en generatedValue)
-private String type;
-private String brand;
-private String name;
-private Double price;
-private Double availableSize;
-private Double refreshRate;
-private String screenType;
-private String screenQuality;
-private Boolean smartTv;
-private Boolean wifi;
-private Boolean voiceControl;
-private Boolean hdr;
-private Boolean bluetooth;
-private Boolean ambiLight;
-private Integer originalStock;
-private Integer sold;
-//default constructor;
-//            constructor
-//    alle getters en setters
+    private String type;
+    private String brand;
+    private String name;
+    private Double price;
+    private Double availableSize;
+    private Double refreshRate;
+    private String screenType;
+    private String screenQuality;
+    private Boolean smartTv;
+    private Boolean wifi;
+    private Boolean voiceControl;
+    private Boolean hdr;
+    private Boolean bluetooth;
+    private Boolean ambiLight;
+    private Integer originalStock;
+    private Integer sold;
 
 
-    public Television() {
-    }
-
-
-    public Television(Long id, String type, String brand, String name, Double price, Double availableSize, Double refreshRate, String screenType, String screenQuality, Boolean smartTv, Boolean wifi, Boolean voiceControl, Boolean hdr, Boolean bluetooth, Boolean ambiLight, Integer originalStock, Integer sold) {
-        this.id = id;
+    public TelevisionInputDto(String type, String brand, String name, Double price, Double availableSize, Double refreshRate, String screenType, String screenQuality, Boolean smartTv, Boolean wifi, Boolean voiceControl, Boolean hdr, Boolean bluetooth, Boolean ambiLight, Integer originalStock, Integer sold) {
         this.type = type;
         this.brand = brand;
         this.name = name;
@@ -55,10 +37,6 @@ private Integer sold;
         this.ambiLight = ambiLight;
         this.originalStock = originalStock;
         this.sold = sold;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getType() {
@@ -123,13 +101,6 @@ private Integer sold;
 
     public Integer getSold() {
         return sold;
-    }
-
-
-
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setType(String type) {

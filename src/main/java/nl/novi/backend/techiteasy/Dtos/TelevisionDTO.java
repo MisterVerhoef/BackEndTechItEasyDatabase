@@ -1,43 +1,29 @@
-package nl.novi.backend.techiteasy.Models;
+package nl.novi.backend.techiteasy.Dtos;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class TelevisionDTO {
 
-@Entity
-public class Television {
+    private Long id;
+    private String type;
+    private String brand;
+    private String name;
+    private Double price;
+    private Double availableSize;
+    private Double refreshRate;
+    private String screenType;
+    private String screenQuality;
+    private Boolean smartTv;
+    private Boolean wifi;
+    private Boolean voiceControl;
+    private Boolean hdr;
+    private Boolean bluetooth;
+    private Boolean ambiLight;
+    private Integer originalStock;
+    private Integer sold;
 
-@Id
-@GeneratedValue
-Long id;
-
-//(incl. annotaties id en generatedValue)
-private String type;
-private String brand;
-private String name;
-private Double price;
-private Double availableSize;
-private Double refreshRate;
-private String screenType;
-private String screenQuality;
-private Boolean smartTv;
-private Boolean wifi;
-private Boolean voiceControl;
-private Boolean hdr;
-private Boolean bluetooth;
-private Boolean ambiLight;
-private Integer originalStock;
-private Integer sold;
-//default constructor;
-//            constructor
-//    alle getters en setters
-
-
-    public Television() {
+    public TelevisionDTO() {
     }
 
-
-    public Television(Long id, String type, String brand, String name, Double price, Double availableSize, Double refreshRate, String screenType, String screenQuality, Boolean smartTv, Boolean wifi, Boolean voiceControl, Boolean hdr, Boolean bluetooth, Boolean ambiLight, Integer originalStock, Integer sold) {
+    public TelevisionDTO(Long id, String type, String brand, String name, Double price, Double availableSize, Double refreshRate, String screenType, String screenQuality, Boolean smartTv, Boolean wifi, Boolean voiceControl, Boolean hdr, Boolean bluetooth, Boolean ambiLight, Integer originalStock, Integer sold) {
         this.id = id;
         this.type = type;
         this.brand = brand;
@@ -124,9 +110,6 @@ private Integer sold;
     public Integer getSold() {
         return sold;
     }
-
-
-
 
     public void setId(Long id) {
         this.id = id;
