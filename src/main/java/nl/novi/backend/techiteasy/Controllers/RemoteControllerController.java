@@ -30,7 +30,7 @@ public RemoteControllerController(RemoteControllerService remoteControllerServic
 }
 
 @GetMapping("/remotecontrollers/{id}")
-    public RemoteControllerDto getallRemoteController(@PathVariable("id") Long id) {
+    public RemoteControllerDto getAllRemoteController(@PathVariable("id") Long id) {
 
     RemoteControllerDto remoteControllerDto = remoteControllerService.getRemoteController(id);
 
@@ -40,7 +40,7 @@ public RemoteControllerController(RemoteControllerService remoteControllerServic
 
 @PostMapping("/remotecontrollers")
     public RemoteControllerDto addRemoteController(@RequestBody RemoteControllerDto dto) {
-    RemoteControllerDto remotecontrollerDto = remoteControllerService.addRemoteController(dto);
+    RemoteControllerDto remoteControllerDto = remoteControllerService.addRemoteController(dto);
     return dto1;
 
 }

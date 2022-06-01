@@ -13,19 +13,19 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class RemoteControllerService {
+public class RemoteControllerService  {
 
-@Autowired
+    @Autowired
     private RemoteControllerRepository remoteControllerRepository;
 
-public List<RemoteControllerDto> getAllRemoteControllers(){
-    List<RemoteControllerDto> dtos = new ArrayList<>();
-    List<RemoteController> remoteControllers = remoteControllerRepository.findAll();
-    for (RemoteController rc : remoteControllers) {
-        dtos.add(transferToDto(rc));
+    public List<RemoteControllerDto> getAllRemoteControllers() {
+        List<RemoteControllerDto> dtos = new ArrayList<>();
+        List<RemoteController> remoteControllers = remoteControllerRepository.findAll();
+        for (RemoteController rc : remoteControllers) {
+            dtos.add(transferToDto(rc));
+        }
+        return dtos;
     }
-    return dtos;
-}
 
     public RemoteControllerDto getRemoteController(long id) {
         Optional<RemoteController> remoteController = remoteControllerRepository.findById(id);
@@ -88,6 +88,5 @@ public List<RemoteControllerDto> getAllRemoteControllers(){
 
         return remoteController;
     }
-
 
 }
